@@ -1,0 +1,2 @@
+module ChatSpaceHelper
+end
