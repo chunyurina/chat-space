@@ -10,94 +10,95 @@
 .chat-main{
   @include hb(100vh, #ffffff);
   width: calc(100vw - 300px);
-    .header{
-      @include hb(100px, #ffffff);
-      padding: 0 40px;
-      border-bottom: 1px solid #eeeeee;
+  .header{
+    @include hb(100px, #ffffff);
+    padding: 0 40px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__left-box__current-group{
+      @include fc(20px, #333333);
+      margin-top: 35px;
+    }
+    &__left-box__member-list{
+      @include fc(12px, #999999);
+      display: flex;
+      margin-top: 15px;
+      &__member{
+        padding-right: 5px;
+      }
+    }
+    &__edit-btn{
+      @include fc(16px,#38aef0);
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      text-decoration: none;
+      border: 1px solid #38aef0;
+      margin-top: 28px;
+      padding: 0 20px;
+    }
+      
+  }
+  .messages{
+    @include hb(calc(100vh - 190px), #fafafa);
+    padding: 35px 40px 0;
+    &__top-box{
+      display: flex;
+      padding-bottom: 12px;
+      &__user{
+        @include fc(16px,#333333);
+        font-weight: bold;
+      }
+      &__date{
+        @include fc(12px, #999999);
+        padding-left: 10px;
+      }
+    }
+    &__comment{
+      @include fc(14px, #434a54);
+      margin-bottom: 46px;
+    }
+  }
+  .form{
+    @include hb(90px, #d2d2d2);
+    padding: 20px 50px 20px 40px;
+    &__box{
       display: flex;
       justify-content: space-between;
-        &__left-box__current-group{
-          @include fc(20px, #333333);
-          margin-top: 35px;
-        }
-        &__left-box__member-list{
-          @include fc(12px, #999999);
-          display: flex;
-          margin-top: 15px;
-            &__member{
-              padding-right: 5px;
-            }
-        }
-        &__edit-btn{
-          @include fc(16px,#38aef0);
-          display: block;
-          height: 40px;
-          line-height: 40px;
-          text-decoration: none;
-          border: 1px solid #38aef0;
-          margin-top: 28px;
-          padding: 0 20px;
-        }
-        
     }
-    .messages{
-      @include hb(calc(100vh - 190px), #fafafa);
-      padding: 35px 40px 0;
-        &__top-box{
-          display: flex;
-          padding-bottom: 12px;
-          &__user{
-            @include fc(16px,#333333);
-            font-weight: bold;
-          }
-          &__date{
-            @include fc(12px, #999999);
-            padding-left: 10px;
-          }
+    &__contents{
+      width: 100%;
+      background-color: #ffffff;
+      position: relative;
+      &__text{
+        height: 50px;
+        border-style: none;
+        width: 100%;
+        padding: 0 45px 0 15px;
+      }
+      &__icon{
+        height: 50px;
+        position: absolute;
+        right: 10px;
+        &__style{
+          font-size: 25px;
+          line-height: 50px; 
         }
-        &__comment{
-          @include fc(14px, #434a54);
-          margin-bottom: 46px;
+        input{
+          display: none;
         }
-    }
-    .form{
-      @include hb(90px, #d2d2d2);
-      padding: 20px 50px 20px 40px;
-        &__box{
-          display: flex;
-          justify-content: space-between;
-          &__contents{
-            width: 100%;
-            background-color: #ffffff;
-            position: relative;
-              &__text{
-                height: 50px;
-                border-style: none;
-                width: 100%;
-                padding: 0 45px 0 15px;
-              }
-              &__icon{
-                height: 50px;
-                position: absolute;
-                right: 10px;
-                  &__style{
-                    font-size: 25px;
-                   line-height: 50px; 
-                  }
-                  input{
-                    display: none;
-                  }
-              }
+      }
 
-          }
-          &__submit{
-            @include hb(50px, #38aef0);
-            @include fc(16px,#ffffff);
-            border-style: none;
-            padding: 0 30px;
-            margin-left: 15px;
-          }
-          
-        }            
     }
+    &__submit{
+      @include hb(50px, #38aef0);
+      @include fc(16px,#ffffff);
+      border-style: none;
+      padding: 0 30px;
+      margin-left: 15px;
+    }
+      
+                
+  }
 }

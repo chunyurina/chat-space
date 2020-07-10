@@ -1,21 +1,24 @@
-%body
-  .chat-side
-    .header
-      .header__box
-        %p.header__box__username
-          = current_user.name
-        %ul.header__box__menu
-          %li.header__box__menu__new-group
-            =link_to "#" do
-              = icon('far', 'edit',class: "icon-btn")
-          %li.header__box__menu__edit-user
-            =link_to edit_user_path(current_user) do
-              = icon('fas', 'cog', class: "icon-btn")
-    .groups
-      .group techcamp
-      .group__message まだメッセージはありません。
-      .group techcamp
-      .group__message まだメッセージはありません。
+
+.chat-side
+  .header
+    .header__box
+      %p.header__box__username
+        = current_user.name
+      %ul.header__box__menu
+        %li.header__box__menu__new-group
+          =link_to new_group_path(current_user) do
+            = icon('far', 'edit',class: "icon-btn")
+        %li.header__box__menu__edit-user
+          =link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: "icon-btn")
+  .groups
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class: "group__link" do
+          .group__name
+            = group.name
+          .group__message 
+            メッセージはまだありません
 
 
         
