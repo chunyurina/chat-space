@@ -10,43 +10,44 @@
 .chat-side{
   @include hb(100vh, #253141);
   width: 300px;
-    .header{
-      height: 100px;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-        &__box{
-          @include fc(16px,#ffffff);
-          height: 20px;
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          font-weight: bold;
-            &__menu{
-              display: flex;
-                .icon-btn{
-                  margin-left: 5px;
-                  color: #ffffff;
-                }
-                
-            }
-        }
-    }  
-    .groups{
-      @include hb(calc(100vh - 100px),#2f3e51);
+  .header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__box{
+      @include fc(16px,#ffffff);
+      height: 20px;
       width: 100%;
-      padding: 0 20px;
-      color: #ffffff;
-        .group{
-          font-size: 15px;
-          padding: 20px 0 5px;
-        }
-        .group__message{
-          font-size: 11px;
-          padding-bottom: 40px;
-        }
-
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      &__menu{
+        display: flex;
+          .icon-btn{
+            margin-left: 5px;
+            color: #ffffff;
+          }
+          
+      }
     }
-    
-    
+  }  
+  .groups{
+    @include hb(calc(100vh - 100px),#2f3e51);
+    width: 100%;
+    padding: 0 20px;
+    .group__link{
+      text-decoration: none;
+    }
+    .group__name{
+      @include fc(15px, #ffffff);
+      padding: 20px 0 5px;
+    }
+    .group__message{
+      @include fc(11px, #ffffff);
+      padding-bottom: 40px;
+    }
+      
+      
+  }
 }
