@@ -1,0 +1,29 @@
+%body
+  .chat-main
+    .header
+      .header__left-box
+        %h1.header__left-box__current-group test
+        %ul.header__left-box__member-list
+          Member：
+          %li.header__left-box__member-list__member masa
+      =link_to 'Edit', '#', class: "header__edit-btn" 
+    .messages
+      .messages__top-box
+        .messages__top-box__user masa
+        .messages__top-box__date 2020/01/01(Mon) 00:00:00
+      .messages__comment おはよう
+      .messages__top-box
+        .messages__top-box__user masa
+        .messages__top-box__date 2020/01/01(Mon) 00:00:00
+      .messages__comment おはよう
+    .form
+      %form.form__box
+        .form__box__contents
+          %input{type: "text", placeholder: "type a message", class: "form__box__contents__text"}
+          %label{class: "form__box__contents__icon"}
+            = icon('far', 'image', class: "form__box__contents__icon__style")
+            %input{type: "file"}
+        %input{type: "submit", value: "Send", class: "form__box__submit"}
+
+
+
