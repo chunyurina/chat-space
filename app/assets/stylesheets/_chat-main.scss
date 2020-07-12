@@ -66,39 +66,37 @@
     &__box{
       display: flex;
       justify-content: space-between;
-    }
-    &__contents{
-      width: 100%;
-      background-color: #ffffff;
-      position: relative;
-      &__text{
-        height: 50px;
-        border-style: none;
+      &__contents{
         width: 100%;
-        padding: 0 45px 0 15px;
-      }
-      &__icon{
-        height: 50px;
-        position: absolute;
-        right: 10px;
-        &__style{
-          font-size: 25px;
-          line-height: 50px; 
+        background-color: #ffffff;
+        position: relative;
+        &__text{
+          height: 50px;
+          border-style: none;
+          width: 100%;
+          padding: 0 45px 0 15px;
         }
-        input{
-          display: none;
+        &__icon{
+          height: 50px;
+          position: absolute;
+          right: 10px;
+          &__style{
+            font-size: 25px;
+            line-height: 50px; 
+          }
+          input{
+            display: none;
+          }
         }
       }
-
-    }
-    &__submit{
-      @include hb(50px, #38aef0);
-      @include fc(16px,#ffffff);
-      border-style: none;
-      padding: 0 30px;
-      margin-left: 15px;
-    }
-      
+      &__submit{
+        @include hb(50px, #38aef0);
+        @include fc(16px,#ffffff);
+        border-style: none;
+        padding: 0 30px;
+        margin-left: 15px;
+      }
+    }  
                 
   }
 }
