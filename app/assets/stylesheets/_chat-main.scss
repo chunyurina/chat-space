@@ -43,6 +43,7 @@
   .messages{
     @include hb(calc(100vh - 190px), #fafafa);
     padding: 35px 40px 0;
+    overflow: scroll;
     &__top-box{
       display: flex;
       padding-bottom: 12px;
