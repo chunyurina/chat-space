@@ -64,4 +64,4 @@ $(function(){
       $('.form__box__submit').prop("disabled", false);
     });
   });
-}); 
+});
